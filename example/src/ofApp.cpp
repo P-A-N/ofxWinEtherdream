@@ -4,7 +4,9 @@ void ofApp::setup()
 {
 	ofBackground(ofColor::black);
 	ofSetFrameRate(30);
-	dac = make_unique<ofxWinEtherdream>(0, 100000);
+	ofSetLogLevel(OF_LOG_VERBOSE);
+
+	dac = make_unique<ofxWinEtherdream>("10.0.0.23", 100000);
 	ildaFrame.setup();
 	gui.setup(ildaFrame.parameters, "dac.xml");
 	gui.loadFromFile("dac.xml");

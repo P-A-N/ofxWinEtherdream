@@ -388,6 +388,15 @@ EXPORT int __stdcall EtherDreamGetCardNum(void){
     return count;
 }
 
+EXPORT std::string __stdcall EtherDreamGetIP(const int *CardNum)
+{
+	dac_t *d = dac_get(*CardNum);
+	char host[40];
+	strncpy(host, inet_ntoa(d->addr), sizeof(host) - 1);
+	host[sizeof(host) - 1] = 0;
+	return std::string(host);
+}
+
 EXPORT int __stdcall EtherDreamGetVersion(const int *CardNum) {
     return 0;
 }

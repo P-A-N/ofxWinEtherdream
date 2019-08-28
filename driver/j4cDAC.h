@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h>
+#include <string>
 #define J4CDAC_API extern "C"
 
 struct EL_Pnt_s {
@@ -26,6 +27,7 @@ struct EAD_Pnt_s {
 J4CDAC_API bool __stdcall DllMain(HANDLE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved);
 
 J4CDAC_API int __stdcall EtherDreamGetCardNum(void);
+J4CDAC_API std::string __stdcall EtherDreamGetIP(const int *CardNum);
 J4CDAC_API void __stdcall EtherDreamGetDeviceName(const int *CardNum, char *buf, int max);
 J4CDAC_API bool __stdcall EtherDreamOpenDevice(const int *CardNum);
 J4CDAC_API bool __stdcall EtherDreamWriteFrame(const int *CardNum, const struct EAD_Pnt_s* data,
