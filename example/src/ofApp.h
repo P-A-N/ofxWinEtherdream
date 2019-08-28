@@ -26,8 +26,7 @@ public:
 	
 private:
 	ofxIlda::Frame ildaFrame;
-	shared_ptr<ofxWinEtherdream> dac0;
-	shared_ptr<ofxWinEtherdream> dac1;
+	vector<shared_ptr<ofxWinEtherdream>> dacs;
 	ofxPanel gui;
 	bool b_curve;
 };
