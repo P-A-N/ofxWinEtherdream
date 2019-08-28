@@ -24,8 +24,9 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 	
+private:
 	ofxIlda::Frame ildaFrame;
 	unique_ptr<ofxWinEtherdream> dac;
-
 	ofxPanel gui;
+	bool b_curve;
 };
