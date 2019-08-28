@@ -71,8 +71,8 @@ protected:
 			if (!points.empty())
 			{
 				EtherDreamWriteFrame(&id, (EAD_Pnt_s*)points.data(), points.size() * sizeof(EAD_Pnt_s), pps, 1);
-			
 			}
+			ofSleepMillis(1000 * 0.001);
 		}
 	}
 
