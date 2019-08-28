@@ -3,7 +3,8 @@
 void ofApp::setup() 
 {
 	ofBackground(ofColor::black);
-	dac = make_unique<ofxWinEtherdream>(0, 70000);
+	ofSetFrameRate(30);
+	dac = make_unique<ofxWinEtherdream>(0, 100000);
 	ildaFrame.setup();
 	gui.setup(ildaFrame.parameters, "dac.xml");
 	gui.loadFromFile("dac.xml");
@@ -20,13 +21,17 @@ void ofApp::draw()
 	ildaFrame.draw(0, 0, ofGetWidth(), ofGetHeight());
 	ofPopStyle();
 	gui.draw();
+	ofDrawBitmapStringHighlight("fps:" + ofToString(ofGetFrameRate(), 3), 10, ofGetHeight() - 20);
 }
 void ofApp::keyPressed(int key) 
 {
 	if (key == ' ')
 		ildaFrame.addPoly();
 	if (key == 'c')
+	{
 		ildaFrame.clear();
+		dac->clear();
+	}
 }
 void ofApp::mouseDragged(int x, int y, int button) { }
 void ofApp::mousePressed(int x, int y, int button) { ildaFrame.getLastPoly().lineTo(x / (float)ofGetWidth(), y / (float)ofGetHeight()); }
