@@ -32,6 +32,8 @@ public:
 			startThread();
 		else
 			ofLogError() << "no " << ip_addr << "dac.";
+
+		points.resize(1);
 	}
 
 	~ofxWinEtherdream()
@@ -70,9 +72,10 @@ protected:
 		{
 			if (!points.empty())
 			{
-				EtherDreamWriteFrame(&id, (EAD_Pnt_s*)points.data(), points.size() * sizeof(EAD_Pnt_s), pps, 1);
+				if (EtherDreamGetStatus(&id) == GET_STATUS_READY)
+					EtherDreamWriteFrame(&id, (EAD_Pnt_s*)points.data(), points.size() * sizeof(EAD_Pnt_s), pps, 1);
 			}
-			ofSleepMillis(1000 * 0.001);
+			//ofSleepMillis(1000 * 0.0001);
 		}
 	}
 
