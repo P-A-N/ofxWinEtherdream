@@ -4,9 +4,9 @@ void ofApp::setup()
 {
 	ofBackground(ofColor::black);
 	ofSetFrameRate(30);
-	ofSetLogLevel(OF_LOG_VERBOSE);
 
-	dac = make_unique<ofxWinEtherdream>("10.0.0.23", 100000);
+	dac0 = make_shared<ofxWinEtherdream>("10.0.0.22", 100000);
+	dac1 = make_shared<ofxWinEtherdream>("10.0.0.23", 100000);
 	ildaFrame.setup();
 	gui.setup(ildaFrame.parameters, "dac.xml");
 	gui.loadFromFile("dac.xml");
@@ -24,13 +24,15 @@ void ofApp::update()
 		if (frm > 100)
 		{
 			ildaFrame.clear();
-			dac->clear();
+			dac0->clear();
+			dac1->clear();
 			frm = 0;
 		}
 	}
 
 	ildaFrame.update();
-	dac->set_points(ildaFrame.getPoints());
+	dac0->set_points(ildaFrame.getPoints());
+	dac1->set_points(ildaFrame.getPoints());
 }
 void ofApp::draw() 
 {
@@ -48,7 +50,8 @@ void ofApp::keyPressed(int key)
 	if (key == 'c')
 	{
 		ildaFrame.clear();
-		dac->clear();
+		dac0->clear();
+		dac1->clear();
 	}
 	if (key == '1')
 		b_curve = !b_curve;

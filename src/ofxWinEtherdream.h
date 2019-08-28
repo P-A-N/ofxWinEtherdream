@@ -2,6 +2,8 @@
 #include "j4cDAC.h"
 #include "ofxIldaPoint.h"
 
+static int num_dac_in_lan;
+
 class ofxWinEtherdream : public ofThread
 {
 public:
@@ -9,13 +11,11 @@ public:
 	ofxWinEtherdream(const string _ip_addr, const int _pps) : ip_addr(_ip_addr), id(-1), pps(_pps), b_found_dac(false)
 	{
 		ofSleepMillis(1200);
-		auto cnt = EtherDreamGetCardNum();
-		ofLogVerbose() << "found " << cnt << "dacs";
+		static bool call_once = [&]() -> bool { get_num_dac_in_lan(); return true; }();
 
-		for (auto i = 0; i < cnt; i++)
+		for (auto i = 0; i < num_dac_in_lan; i++)
 		{
 			auto this_addr = EtherDreamGetIP(&i);
-			ofLogVerbose() << "id " << i << " is " << this_addr;
 			if (ip_addr == this_addr)
 			{
 				id = i;
@@ -25,6 +25,7 @@ public:
 				else
 					ofLogError() << "fail to open " << ip_addr << " dac.";
 				b_found_dac = true;
+				break;
 			}
 		}
 
@@ -75,11 +76,17 @@ protected:
 				if (EtherDreamGetStatus(&id) == GET_STATUS_READY)
 					EtherDreamWriteFrame(&id, (EAD_Pnt_s*)points.data(), points.size() * sizeof(EAD_Pnt_s), pps, 1);
 			}
-			//ofSleepMillis(1000 * 0.0001);
+			ofSleepMillis(1000 * 0.0001);
 		}
 	}
 
 private:
+
+	void get_num_dac_in_lan()
+	{
+		num_dac_in_lan = EtherDreamGetCardNum();
+		ofLog() << "found " << num_dac_in_lan << " dacs";
+	}
 
 	string ip_addr;
 	bool b_found_dac;
