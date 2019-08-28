@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<IldaFrame_Params>
+	<Draw_Lines>1</Draw_Lines>
+	<Draw_Points>0</Draw_Points>
+	<Draw_Point_nums>0</Draw_Point_nums>
+	<Color>1, 1, 1, 1</Color>
+	<Blank_Count>30</Blank_Count>
+	<End_Count>30</End_Count>
+	<Do_Cap_X>0</Do_Cap_X>
+	<Do_Cap_Y>0</Do_Cap_Y>
+	<Do_Flip_X>0</Do_Flip_X>
+	<Do_Flip_Y>1</Do_Flip_Y>
+	<Offset>0, 0</Offset>
+	<Scale>1, 1</Scale>
+	<PolyProcessor>
+		<smoothAmount>0</smoothAmount>
+		<optimizeTolerance>0</optimizeTolerance>
+		<collapse>0</collapse>
+		<targetPointCount>500</targetPointCount>
+		<spacing>0.000426505</spacing>
+	</PolyProcessor>
+</IldaFrame_Params>

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxButton.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxColorPicker.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxInputField.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxLabel.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxPanel.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGui">
+			<UniqueIdentifier>{4F2A59AF-5F4E-704B-D067-EC13}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGui\src">
+			<UniqueIdentifier>{645E9533-4DCD-6179-1CDF-CB65}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxWinEtherdream">
+			<UniqueIdentifier>{506A1419-6CAF-19A1-78FF-8438}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxWinEtherdream\src">
+			<UniqueIdentifier>{BAB08970-E800-9171-B6DD-EFB2}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxWinEtherdream\libs">
+			<UniqueIdentifier>{F838FEE6-25D2-6C2C-083C-0342}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxWinEtherdream\libs\win">
+			<UniqueIdentifier>{20F1B759-670D-016D-DE56-0884}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxWinEtherdream\libs\win\include">
+			<UniqueIdentifier>{C49A14C2-B64D-9031-FD4E-1BF2}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="local_addons">
+			<UniqueIdentifier>{DE6745C7-E99D-D8E0-F77D-C032}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="local_addons\ofxIlda">
+			<UniqueIdentifier>{9D61F64E-E3EE-7204-CC39-E908}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="local_addons\ofxIlda\src">
+			<UniqueIdentifier>{EF1E7B0D-AC30-B662-6279-C0FE}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxButton.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxColorPicker.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxGui.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxInputField.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxLabel.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxPanel.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxWinEtherdream\src\ofxWinEtherdream.h">
+			<Filter>addons\ofxWinEtherdream\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxWinEtherdream\libs\win\include\j4cDAC.h">
+			<Filter>addons\ofxWinEtherdream\libs\win\include</Filter>
+		</ClInclude>
+		<ClInclude Include="addons\ofxIlda\src\ofxIldaFrame.h">
+			<Filter>local_addons\ofxIlda\src</Filter>
+		</ClInclude>
+		<ClInclude Include="addons\ofxIlda\src\ofxIldaPoint.h">
+			<Filter>local_addons\ofxIlda\src</Filter>
+		</ClInclude>
+		<ClInclude Include="addons\ofxIlda\src\ofxIldaPoly.h">
+			<Filter>local_addons\ofxIlda\src</Filter>
+		</ClInclude>
+		<ClInclude Include="addons\ofxIlda\src\ofxIldaPolyProcessor.h">
+			<Filter>local_addons\ofxIlda\src</Filter>
+		</ClInclude>
+		<ClInclude Include="addons\ofxIlda\src\ofxIldaRenderTarget.h">
+			<Filter>local_addons\ofxIlda\src</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
+</Project>
