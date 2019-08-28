@@ -25,7 +25,6 @@ public:
 			EtherDreamCloseDevice(&id);
 		}
 		EtherDreamClose();
-		//to_ch.close(); done_ch.close();
 		std::unique_lock<std::mutex> lck(mutex);
 		stopThread();
 		condition.notify_all();
@@ -39,7 +38,6 @@ public:
 			std::unique_lock<std::mutex> lock(mutex);
 			points = std::move(_points);
 			condition.notify_all();
-			//to_ch.send(_points);
 		}
 	}
 
@@ -57,16 +55,11 @@ protected:
 				ofSleepMillis(1000 * 0.1);
 			}
 		}
-		//vector<ofxIlda::Point> _points;
-		//while (to_ch.receive(_points))
-		//{
-		//	EtherDreamWriteFrame(&id, (EAD_Pnt_s*)_points.data(), _points.size() * sizeof(EAD_Pnt_s), pps, 1);
-		//}
+
 	}
 
 private:
 
-	//ofThreadChannel<vector<ofxIlda::Point>> to_ch, done_ch;
 	std::condition_variable condition;
 	int id, pps;
 	vector<ofxIlda::Point> points;
